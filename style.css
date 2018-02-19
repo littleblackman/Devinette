@@ -38,3 +38,7 @@ nav .material-icons { font-size: 2em; color: gray}
 #container { width: 1200px; margin: 0 auto; }
 
 .question { border-radius: 10px; background-color: #b9def0; padding: 10px; margin-bottom: 10px}
+
+.divAnswer { display: none}
+
+.deleteButton { float: right}

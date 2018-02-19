@@ -18,8 +18,6 @@ while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
 
 };
 
-
-
 ;?>
 <!--- VIEW --->
 <?php include('_head.php');?>
@@ -33,20 +31,32 @@ while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
                     <h3><?php echo $devinette['name'];?></h3>
                     <?php echo $devinette['question'];?>
                     <hr/>
-                    <button>Voir la réponse</button>
                     <button style="">
                         <a href="edit.php?id=<?php echo $devinette['id'];?>">
                             modifier
                         </a>
                     </button>
-                    <button style="">
+                    <button class="deleteButton">
                         <a href="delete.php?id=<?php echo $devinette['id'];?>">
                             effacer
                         </a>
                     </button>
+                    <button class="showAnswer">
+                        Voir la réponse
+                    </button>
+                    <div class="divAnswer">
+                        <?php echo $devinette['answer'];?>
+                    </div>
                 </div>
             <?php endforeach;?>
 
     </div>
 
 <?php include('_footer.php');?>
+
+
+<script type="text/javascript">
+    $('.showAnswer').click(function(){
+        $(this).next().toggle();
+    })
+</script>

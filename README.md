@@ -1,4 +1,4 @@
-# mvc_architecture_
+# mvc_architecture
 Example of an mvc architecture
 
 From an procedural code (in master)
