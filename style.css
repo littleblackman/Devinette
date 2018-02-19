@@ -1,0 +1,40 @@
+/* ----------------------------- */
+/*  my Instagram Like project
+/* ----------------------------- */
+
+/* common parts of document */
+
+body { padding: 0; margin: 0; background-color: #FAFAFA}
+a, a:hover {  color: #000; text-decoration: none;}
+h1 { font-family: 'Pacifico', cursive; display: inline; font-size: 2em; font-weight: normal; padding-left: 30px; color: gray}
+
+
+/* header menu */
+
+header {
+            height: 4em;
+            line-height: 4em;
+            white-space: nowrap;
+            background-color: #FFFFFF;
+            border-bottom: 1px #E6E6E6 solid ;
+        }
+
+/* nav bar */
+nav {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+#input-search { padding: 10px; border-radius: 8px; border-color: 1px solid grey; }
+
+.nav-item { width: 30%}
+nav .material-icons { font-size: 2em; color: gray}
+.end-row { text-align: right}
+.end-row a {margin-left: 20%;}
+
+
+/* container */
+#container { width: 1200px; margin: 0 auto; }
+
+.question { border-radius: 10px; background-color: #b9def0; padding: 10px; margin-bottom: 10px}
