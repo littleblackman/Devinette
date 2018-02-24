@@ -1,6 +1,3 @@
-<?php include('_head.php');?>
-<?php include('_header.php');?>
-
 <div id="container">
     <h2>Liste des devinettes</h2>
 
@@ -29,9 +26,6 @@
     <?php endforeach;?>
 
 </div>
-
-<?php include('_footer.php');?>
-
 
 <script type="text/javascript">
     $('.showAnswer').click(function(){

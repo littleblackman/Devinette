@@ -28,12 +28,18 @@ class Home
 
         };
 
-        include(VIEW.'home.php');
+        $myView = new View('home');
+        $myView->render($devinettes);
+        
+        
+        //include(VIEW.'home.php');
     }
 
     public function showContact()
     {
-        include (VIEW.'contact.php');
+
+        $myView = new View('contact');
+        $myView->render();
     }
 
 
