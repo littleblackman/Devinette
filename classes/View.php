@@ -6,7 +6,6 @@ class View
 
     private $template;
 
-
     public function __construct($template)
     {
         $this->template = $template;
@@ -14,7 +13,6 @@ class View
 
     public function render($devinettes = null)
     {
-
         $template = $this->template;
         ob_start();
         include(VIEW.$template.'.php');

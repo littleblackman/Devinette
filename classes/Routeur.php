@@ -29,10 +29,8 @@ class Routeur
             $controller = $this->routes[$request]['controller'];
             $method     = $this->routes[$request]['method'];
 
-
             $currentController = new $controller();
             $currentController->$method();
-
 
         } else {
             echo '404';

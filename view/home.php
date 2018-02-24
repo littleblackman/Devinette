@@ -3,16 +3,16 @@
 
     <?php foreach($devinettes as $devinette):?>
         <div class="question">
-            <h3><?php echo $devinette['name'];?></h3>
-            <?php echo $devinette['question'];?>
+            <h3><?php echo $devinette->getName();?></h3>
+            <?php echo $devinette->getQuestion();?>
             <hr/>
             <button style="">
-                <a href="edit.php?id=<?php echo $devinette['id'];?>">
+                <a href="edit.php?id=<?php echo $devinette->getId();?>">
                     modifier
                 </a>
             </button>
             <button class="deleteButton">
-                <a href="delete.php?id=<?php echo $devinette['id'];?>">
+                <a href="delete.php?id=<?php echo $devinette->getId();;?>">
                     effacer
                 </a>
             </button>
@@ -20,7 +20,7 @@
                 Voir la réponse
             </button>
             <div class="divAnswer">
-                <?php echo $devinette['answer'];?>
+                <?php echo $devinette->getAnswer();?>
             </div>
         </div>
     <?php endforeach;?>
