@@ -1,5 +1,4 @@
 <?php
-include_once('../_config.php');
 
 /*** accès au model ***/
 $query = "SELECT * FROM devinette";
@@ -18,4 +17,4 @@ while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
 
 };
 
-include('../view/home.php');
+include(VIEW.'home.php');
