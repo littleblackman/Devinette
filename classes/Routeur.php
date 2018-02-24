@@ -1,7 +1,5 @@
 <?php
 
-include_once(CONTROLLER.'Home.php');
-
 /**
  * Class Routeur
  *
