@@ -12,7 +12,7 @@
                 </a>
             </button>
             <button class="deleteButton">
-                <a href="delete.php?id=<?php echo $devinette->getId();;?>">
+                <a href="<?php echo HOST;?>delete/id/<?php echo $devinette->getId();?>">
                     effacer
                 </a>
             </button>

@@ -25,7 +25,7 @@
         </div>
         <div class="nav-item end-row">
             <button>
-                <a href="edit.php">
+                <a href="<?php echo HOST;?>create-devinette.html">
                     Ajouter une devinette
                 </a>
             </button>
