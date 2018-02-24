@@ -7,7 +7,7 @@
             <?php echo $devinette->getQuestion();?>
             <hr/>
             <button style="">
-                <a href="edit.php?id=<?php echo $devinette->getId();?>">
+                <a href="<?php echo HOST;?>modification.html/id/<?php echo $devinette->getId();?>">
                     modifier
                 </a>
             </button>

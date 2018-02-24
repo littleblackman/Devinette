@@ -9,7 +9,7 @@
 class Home
 {
 
-    public function showHome()
+    public function showHome($params)
     {
         
         $manager = new DevinetteManager();
@@ -20,19 +20,20 @@ class Home
 
     }
 
-    public function showContact()
+    public function showContact($params)
     {
 
         $myView = new View('contact');
         $myView->render();
     }
 
-    public function editDev()
+    public function editDev($params)
     {
-        if(isset($_GET['id'])) {
+        extract($params);
 
-            $id = $_GET['id'];
-            $manager = new Devinette();
+        if(isset($id)) {
+
+            $manager = new DevinetteManager();
             $devinette = $manager->find($id);
 
         } else {
@@ -44,21 +45,21 @@ class Home
 
     }
     
-    public function addDev()
+    public function addDev($params)
     {
-        $values = $_POST['values'];
-        
+        extract($params);
+
         $manager = new DevinetteManager();
-        $manager->create($values);
+        $manager->save($values);
 
         $myView = new View();
         $myView->redirect('home.html');
         
     }
 
-    public function delDev()
+    public function delDev($params)
     {
-        $id = $_GET['id'];
+        extract($params);
         $manager = new DevinetteManager();
         $manager->delete($id);
 
