@@ -23,7 +23,6 @@ class DevinetteManager
         $req->execute();
         while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
 
-
             $devinette = new Devinette();
             $devinette->setId($row['id']);
             $devinette->setName($row['name']);

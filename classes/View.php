@@ -13,7 +13,7 @@ class View
 
     public function render($params = array())
     {
-        extract($params); // crée devinette OU devinettes ou truc ou machin
+        extract($params);
 
         $template = $this->template;
         ob_start();

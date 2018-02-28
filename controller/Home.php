@@ -32,10 +32,8 @@ class Home
         extract($params);
 
         if(isset($id)) {
-
             $manager = new DevinetteManager();
             $devinette = $manager->find($id);
-
         } else {
             $devinette = new Devinette();
         }

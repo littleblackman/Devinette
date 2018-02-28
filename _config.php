@@ -21,8 +21,6 @@ class MyAutoload
         define('VIEW', ROOT.'view/');
         define('MODEL', ROOT.'model/');
         define('CLASSES', ROOT.'classes/');
-
-
         define('ASSETS', HOST.'assets/');
     }
 
@@ -37,7 +35,7 @@ class MyAutoload
         } else if (file_exists(CONTROLLER.$class.'.php'))
         {
             include_once (CONTROLLER.$class.'.php');
-        } ;
+        }
 
     }
 }
