@@ -30,7 +30,6 @@ class Home
     public function editDev(Request $request)
     {
         $id = $request->getParam('id');
-
         if($request->getRoute()== "modification.html")
         {
             $manager = new DevinetteManager();
