@@ -1,5 +1,5 @@
 <div id="container">
-    <h2>Liste des devinettes</h2>
+    <h2>Liste des devinettes <?php echo $date;?></h2>
 
     <?php foreach($devinettes as $devinette):?>
         <div class="question">

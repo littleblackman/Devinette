@@ -19,6 +19,7 @@ class Routeur
 
     ];
 
+
     public function __construct($request)
     {
         $this->request = $request;
@@ -60,7 +61,7 @@ class Routeur
 
     public function renderController()
     {
-        
+
         $route  = $this->getRoute();
         $params = $this->getParams();
         

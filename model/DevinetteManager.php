@@ -9,7 +9,6 @@ class DevinetteManager
     public function __construct()
     {
         $this->bdd = new PDO("mysql:host=localhost;dbname=devinette;charset=utf8", "root", "root");
-
     }
 
     public function findAll()

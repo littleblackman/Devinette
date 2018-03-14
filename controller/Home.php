@@ -11,7 +11,7 @@ class Home
 
     public function showHome($params)
     {
-        
+        extract($params);
         $manager = new DevinetteManager();
         $devinettes = $manager->findAll();
 
