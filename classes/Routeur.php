@@ -7,8 +7,8 @@
  */
 class Routeur
 {
+    private $url;
     private $request;
-
     private $routes = [
                             "home.html"             => ["controller" => 'Home', "method" => 'showHome'],
                             "contact.html"          => ["controller" => 'Home', "method" => 'showContact'],
@@ -20,29 +20,37 @@ class Routeur
     ];
 
 
-    public function __construct($request)
+    public function __construct($url)
     {
+        $this->url = $url;
+
+        $request = new Request;
+
+        $this->extractParams();
+        $this->extractRoute();
+
         $this->request = $request;
     }
 
-    public function getRoute()
+    public function extractRoute()
     {
-        $elements = explode('/', $this->request);
-        return $elements[0];
+        $elements = explode('/', $this->url);
+        $this->request->setRoute($elements[0]);
     }
 
-    public function getParams()
+    public function extractParams()
     {
 
-        $params = array();
+        $request = $this->request;
 
         // extract GET params
-        $elements = explode('/', $this->request);
+        $elements = explode('/', $this->url);
         unset($elements[0]);
 
         for($i = 1; $i<count($elements); $i++)
         {
-            $params[$elements[$i]] = $elements[$i+1];  //delete/id/4 => id/4
+            $request->addParam($elements[$i], $elements[$i+1]);
+            //$params[$elements[$i]] = $elements[$i+1];  //delete/id/4 => id/4
             $i++;
         }
 
@@ -51,21 +59,21 @@ class Routeur
         {
             foreach($_POST as $key => $val)
             {
-                $params[$key] = $val;
+                $request->addParam($key, $val);
+                //$params[$key] = $val;
             }
         }
 
-        return $params;
+        //return $params;
 
     }
 
     public function renderController()
     {
 
-        $route  = $this->getRoute();
-        $params = $this->getParams();
+        $request = $this->request;
         
-        if(key_exists($route, $this->routes))
+        if(key_exists($request->getRoute(), $this->routes))
         {
 
             // authorisation
@@ -73,7 +81,7 @@ class Routeur
             $method     = $this->routes[$route]['method'];
 
             $currentController = new $controller();
-            $currentController->$method($params);
+            $currentController->$method($request);
 
         } else {
             echo '404';
