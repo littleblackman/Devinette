@@ -1,6 +1,4 @@
 <?php
-include_once('_config.php');
-
 if(isset($_GET['id'])) {
 
     $id = $_GET['id'];
@@ -35,7 +33,7 @@ if(isset($_GET['id'])) {
     <div id="container">
         <h2>Ajouter une devinette</h2>
 
-        <form action="update.php" method="post">
+        <form action="index.php?action=update" method="post">
 
             <?php if($devinette['id']):?>
                 <input type="hidden" name="values[id]" value="<?php echo $devinette['id'];?>"/>

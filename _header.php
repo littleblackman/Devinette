@@ -12,7 +12,7 @@
         </div>
         <div class="nav-item end-row">
             <button>
-                <a href="edit.php">
+                <a href="index.php?action=edit">
                     Ajouter une devinette
                 </a>
             </button>
