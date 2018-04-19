@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d75b600-3b27-4828-bc03-56246049ab2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/404.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_bdd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_security.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_session.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/authentification.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.php" afterPath="$PROJECT_DIR$/_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_footer.php" afterPath="$PROJECT_DIR$/_footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_header.php" afterPath="$PROJECT_DIR$/_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-    </list>
+    <list default="true" id="1d75b600-3b27-4828-bc03-56246049ab2b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -336,7 +322,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14535000" />
+    <option name="totallyTimeSpent" value="14756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
