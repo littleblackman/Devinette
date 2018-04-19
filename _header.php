@@ -11,11 +11,16 @@
             <input id="input-search" type="text" placeholder="Rechercher"/>
         </div>
         <div class="nav-item end-row">
-            <button>
-                <a href="index.php?action=edit">
-                    Ajouter une devinette
-                </a>
-            </button>
+            <?php if($role == "ADMIN"):?>
+                 hello <?= $username;?>
+                <button>
+                    <a href="index.php?action=edit">
+                        Ajouter une devinette
+                    </a>
+                </button>
+            <?php else:?>
+                <a href="index.php?action=login">login</a>
+            <?php endif;?>
             <a href="#">
                 <i class="material-icons">star_border</i>
             </a>

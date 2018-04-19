@@ -1,23 +1,4 @@
-<?php
-
-/*** accès au model ***/
-$query = "SELECT * FROM devinette";
-$bdd = new PDO("mysql:host=localhost;dbname=devinette;charset=utf8", "root", "root");
-$req = $bdd->prepare($query);
-$req->execute();
-while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-
-    $devinette['id']         = $row['id'];
-    $devinette['name']       = $row['name'];
-    $devinette['question']   = $row['question'];
-    $devinette['answer']     = $row['answer'];
-    $devinette['created_at'] = $row['created_at'];
-
-    $devinettes[] = $devinette; // tableau de tableau
-
-};
-
-;?>
+<?php  $devinettes = getDevinettes();?>
 <!--- VIEW --->
 <?php include('_head.php');?>
 <?php include('_header.php');?>
@@ -30,16 +11,18 @@ while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
                     <h3><?php echo $devinette['name'];?></h3>
                     <?php echo $devinette['question'];?>
                     <hr/>
-                    <button style="">
-                        <a href="index.php?action=edit&id=<?php echo $devinette['id'];?>">
-                            modifier
-                        </a>
-                    </button>
-                    <button class="deleteButton">
-                        <a href="index.php?action=delete&id=<?php echo $devinette['id'];?>">
-                            effacer
-                        </a>
-                    </button>
+                    <?php if($role == "ADMIN"):?>
+                        <button style="">
+                            <a href="index.php?action=edit&id=<?php echo $devinette['id'];?>">
+                                modifier
+                            </a>
+                        </button>
+                        <button class="deleteButton">
+                            <a href="index.php?action=delete&id=<?php echo $devinette['id'];?>">
+                                effacer
+                            </a>
+                        </button>
+                    <?php endif;?>
                     <button class="showAnswer">
                         Voir la réponse
                     </button>
